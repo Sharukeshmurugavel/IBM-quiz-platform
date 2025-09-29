@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="quiz-container">
+    <h1>Interactive Quiz</h1>
+
+    <!-- User Profile -->
+    <div id="profile-container">
+      <label for="username">Enter your name:</label><br>
+      <input type="text" id="username" placeholder="Your name">
+      <br>
+      <button id="start-btn" class="btn">Start Quiz</button>
+    </div>
+
+    <!-- Category Selection -->
+    <div id="category-container" class="hidden">
+      <h2>Select Category</h2>
+      <button class="btn category-btn" data-category="science">Science</button>
+      <button class="btn category-btn" data-category="history">History</button>
+      <button class="btn category-btn" data-category="sports">Sports</button>
+    </div>
+
+    <!-- Quiz Section -->
+    <div id="question-container" class="hidden">
+      <h2 id="question">Question text</h2>
+      <div id="answer-buttons" class="btn-grid"></div>
+      <div class="controls">
+        <button id="next-btn" class="next-btn btn hidden">Next</button>
+      </div>
+    </div>
+
+    <!-- Result Section -->
+    <div id="result-container" class="result-container hidden">
+      <h2>Quiz Finished!</h2>
+      <p>Your score: <span id="score"></span></p>
+      <button id="restart-btn" class="btn">Restart Quiz</button>
+      <button id="home-btn" class="btn">Home</button>
+    </div>
+
+    <!-- Score History -->
+    <div id="history-container" class="result-container hidden">
+      <h2>Score History</h2>
+      <ul id="history-list"></ul>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
